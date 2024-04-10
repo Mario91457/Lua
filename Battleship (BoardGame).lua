@@ -5,6 +5,7 @@ local map = {
     {0, 1, 0, 0}
 }
 
+-- hello
 local total_boats = 0
 local number_of_total_runs = 5
 local misses = 0

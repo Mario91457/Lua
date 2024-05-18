@@ -12,7 +12,7 @@ function GetRandomNumber()
 end
 
 function CheckifWin(jugada, numero)
-    if not Options[jugada] then return "e" end
+    if not Options[jugada] then return " " end
     if optionsforbot[numero] == jugada then
         return "Empate"
     else
@@ -26,12 +26,12 @@ end
 
 for _ = 1, round do
     local random = GetRandomNumber()
-    print("Elige: Piedra Papel y Tijera (recuerda es CapsSensitive yes yes)\n")
+    print("Elige: Piedra Papel y Tijera (recuerda es CapsSensitive)\n")
     local Jugada = io.read()
     Jugada =  tostring(Jugada)
 
-    local ganoOno = CheckifWin(Jugada, random)
-    print("Opcion que eligio el bot: " .. optionsforbot[random])
-    print ("Opcion que elegistes: " .. Jugada)
-    print("y " .. ganoOno)
+    local Resultados = CheckifWin(Jugada, random)
+
+    --ewwwwww
+    print(string.format("Opcion que eligio el bot: %s\nOpcion que elegistes: %s\nResultados: %s", optionsforbot[random], Jugada, Resultados))
 end

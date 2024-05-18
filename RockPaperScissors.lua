@@ -11,7 +11,7 @@ function GetRandomNumber()
     return math.random(1,3)
 end
 
-function Checkiffun(jugada, numero)
+function CheckifWin(jugada, numero)
     if not Options[jugada] then return "e" end
     if optionsforbot[numero] == jugada then
         return "Empate"
@@ -30,9 +30,8 @@ for _ = 1, round do
     local Jugada = io.read()
     Jugada =  tostring(Jugada)
 
-    local ganoOno = Checkiffun(Jugada, random)
+    local ganoOno = CheckifWin(Jugada, random)
     print("Opcion que eligio el bot: " .. optionsforbot[random])
     print ("Opcion que elegistes: " .. Jugada)
     print("y " .. ganoOno)
-
 end

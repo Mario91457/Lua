@@ -26,7 +26,7 @@ end
 
 for _ = 1, round do
     local random = GetRandomNumber()
-    print("Elige: Piedra Papel y Tijera (recuerda es CapsSensitive)\n")
+    print("Elige: Piedra Papel y Tijera (recuerda es Case-Sensitive)\n")
     local Jugada = io.read()
     Jugada =  tostring(Jugada)
 

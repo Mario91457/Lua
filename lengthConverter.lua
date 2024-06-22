@@ -8,7 +8,7 @@ local Units = {
     yd = {m = 0.9144, mm = 914.4, cm = 91.44, km = 0.0009144, pies = 3, pulgadas = 36}
 }
 
-print("Conversor de las unidades de SI (Soporte: mm, cm, m, km, pies, pulgadas, yd)\n")
+print("Conversor de unidades (Soporte: mm, cm, m, km, pies, pulgadas, yd)\n")
 
 print("Unidad inicial: ")
 local UI = io.read()

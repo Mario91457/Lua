@@ -32,6 +32,5 @@ for _ = 1, round do
 
     local Resultados = CheckifWin(Jugada, random)
 
-    --ewwwwww
     print(string.format("Opcion que eligio el bot: %s\nOpcion que elegistes: %s\nResultados: %s", optionsforbot[random], Jugada, Resultados))
 end

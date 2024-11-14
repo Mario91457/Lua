@@ -21,7 +21,15 @@ local function solveQuadratic(a, b, c)
 end
 
 local function CaidaLibre(Values)
+
+    if not Values.v0 then 
+        print("usa la funcion calcularVelocidadInicial para sacar v0")
+        return
+    end
+
     if Values.v0 <= 0 then 
+        -- bajando
+
         if not Values.t then
             local a = -(1 / 2) * Values.g
             local b = Values.v0 
@@ -35,6 +43,8 @@ local function CaidaLibre(Values)
         end
 
     else
+        -- subiendo
+
         Values.t = Values.v0 / Values.g
         local y_peak = Values.y0 + Values.v0 * Values.t - (1 / 2) * Values.g * (Values.t ^ 2)
 
@@ -57,14 +67,31 @@ local function CaidaLibre(Values)
     end
 end
 
+local function calcularVelocidadInicial(g, t, direccion) -- siendo velocidad final siempre 0
+    if not g and not t and not direccion then return end
+
+    local v0
+    if direccion == "+" then
+        v0 = g * t   
+    elseif direccion == "-" then
+        v0 = -g * t
+    end
+
+    print(v0)
+    return v0
+end
+
 CaidaLibre({
-    g = 9.80665,
+    g = 9.81,
 
-    v0 = -30, -- Positivo = Subiendo 2 tramos ("y1" y "t" no es necesario) | Negativo = Bajando
+    -- Positivo = Subiendo, 2 tramos ("y1" y "t" no es necesario)
+    -- Negativo = Bajando
+    -- nil = usar la funcion calcularVelocidadInicial. g = gravedad, t = tiempo, direccion = "+" (arriba) o "-" (abajo)
+    v0 = 10,
 
-    y0 = 100,
-    y1 = 40,
+    y0 = 0,
+    y1 = 0,
 
-    t = nil,
+    t = 3,
     t_increment = 0.01
 })

@@ -41,7 +41,7 @@ local function Parabola(Values)
         	local V = math.sqrt(v0x^2 + Vy^2)
         	local current_theta = math.deg(math.atan(Vy/v0x))
         
-        	print(string.format("Tiempo: %.2fs | X: %.3fm | Y: %.3fm | Altura: %.3fm | Velocidad: %.3fm/s | Vy: %.3fm/s | Angulo: %.3f", t, x, y, y, V, Vy, current_theta))
+        	print(string.format("Tiempo: %.2fs | X: %.3fm | Y: %.3fm | Velocidad: %.3fm/s | Vy: %.3fm/s | Angulo: %.3f", t, x, y, V, Vy, current_theta))
 	end
     print(string.format("Altura maxima (ymax): %.3fm", ymax+Values.height))
 end
